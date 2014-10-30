@@ -1,0 +1,17 @@
+--- 
+title: home page 
+color: red 
+layout: front-page 
+--- 
+<h1>Welcome to my home page!</h1> 
+<p>My favorite color is {{page.color}}. My email is {{site.email}}. Alittle about me: {{site.descripion}}</p> 
+
+ 
+<ul> 
+{% for post in site.posts %} 
+<li> 
+<a href="{{ post.url }}">{{ post.title }}</a> 
+<img src="{{ post.image }}" alt=""> 
+</li> 
+{% endfor %} 
+</ul> 
